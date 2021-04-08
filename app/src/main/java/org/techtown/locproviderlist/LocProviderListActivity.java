@@ -32,9 +32,9 @@ public class LocProviderListActivity extends AppCompatActivity {
                 locProvList = lm.getAllProviders();
 
                 String s = "";
-                for(int i = 0; i < locProvList.size(); i++){
-                    s += "Loc. Provider: " + locProvList.get(i) + "\n"
-                            +"Status: " + lm.isProviderEnabled(locProvList.get(i)) + "\n\n";
+                for(String lp : locProvList){
+                    s += "Loc. Provider: " + lp + "\n"
+                            +"Status: " + lm.isProviderEnabled(lp) + "\n\n";
                 }
                 mTextView.setText(s);
 
